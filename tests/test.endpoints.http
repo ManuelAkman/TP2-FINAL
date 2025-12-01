@@ -1,0 +1,57 @@
+@baseUrl = http://localhost:3000
+@apiKey = FINALTP2
+
+@id = 5d7f2a11-9c3e-4b4d-b2a7-1c2d3e4f5a66
+
+### Health check
+GET {{baseUrl}}/health
+
+### List all productos
+GET {{baseUrl}}/api/v1/productos
+
+### Create new producto
+POST {{baseUrl}}/api/v1/productos
+Content-Type: application/json
+
+{
+  "producto": "Figura de acción",
+  "stockAmount": 10
+}
+
+### Get producto by ID
+# Replace {{id}} with the actual product ID
+GET {{baseUrl}}/api/v1/productos/{{id}}
+
+### Update producto (requires API key)
+# Replace {{id}} with the actual product ID
+PUT {{baseUrl}}/api/v1/productos/{{id}}
+Content-Type: application/json
+x-api-key: {{apiKey}}
+
+{
+  "stockAmount": 29,
+  "producto": "Estufa Philips modelo 3000"
+}
+
+### Delete producto (requires API key)
+# Replace {{id}} with the actual product ID
+DELETE {{baseUrl}}/api/v1/productos/{{id}}
+x-api-key: {{apiKey}}
+
+### Invalid API key example (should return 401)
+PUT {{baseUrl}}/api/v1/productos/{{id}}
+Content-Type: application/json
+x-api-key: invalid_key
+
+{
+  "stockAmount": 5
+}
+
+### Get albums as CSV
+GET {{baseUrl}}/api/v1/albums/csv
+
+### Notes:
+# 1. Ajusta @apiKey para que coincida con tu valor en .env (API_KEY).
+# 2. Reemplaza {{id}} con el ID real del producto en cada petición.
+# 3. Usa la extensión REST Client (humao.rest-client) en VS Code.
+# 4. El endpoint /albums/csv descarga los primeros 15 albums como CSV.
