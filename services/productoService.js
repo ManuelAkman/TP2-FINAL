@@ -3,7 +3,7 @@ import productoRepository from '../repository/productoRepository.js';
 
 class ProductoService {
   async createProducto(data) {
-    // Validate required fields
+    // Validar campos requeridos
     if (!data.producto || data.producto.trim() === '') {
       throw new Error('El nombre del producto es requerido y no puede estar vacío');
     }
@@ -16,14 +16,14 @@ class ProductoService {
       throw new Error('El stock debe ser un entero mayor o igual a 0');
     }
 
-    // Create new producto instance
+    // Crear nueva instancia de producto
     const producto = new Producto({
       producto: data.producto,
       stockAmount: data.stockAmount,
       fechaIngreso: data.fechaIngreso
     });
 
-    // Save to repository
+    // Guardar en el repositorio
     return await productoRepository.create(producto.toJSON());
   }
 
@@ -40,13 +40,13 @@ class ProductoService {
   }
 
   async updateProducto(id, data) {
-    // Validate if producto exists
+    // Validar si el producto existe
     const existingProducto = await productoRepository.getById(id);
     if (!existingProducto) {
       throw new Error('Producto no encontrado');
     }
 
-    // Validate fields if provided
+    // Validar campos si están presentes
     if (data.producto !== undefined && data.producto.trim() === '') {
       throw new Error('producto no puede estar vacío');
     }
@@ -55,7 +55,7 @@ class ProductoService {
       throw new Error('El stock debe ser un entero mayor o igual a 0');
     }
 
-    // Prevent id changes from client input
+    // Prevenir cambios de ID desde la entrada del cliente
     const updatePayload = { ...data };
     if (updatePayload.id) {
       delete updatePayload.id;

@@ -1,15 +1,15 @@
 @baseUrl = http://localhost:3000
 @apiKey = FINALTP2
 
-@id = 7c4d2e88-5f3a-4b6e-9c22-4d5e6f7a8b99
+@id = 2e6a9d44-1c3b-476f-82e1-9a8b7c6d5e33
 
-### Health check
+### Verificación de salud
 GET {{baseUrl}}/health
 
-### List all productos
+### Listar todos los productos
 GET {{baseUrl}}/api/v1/productos
 
-### Create new producto
+### Crear nuevo producto
 POST {{baseUrl}}/api/v1/productos
 Content-Type: application/json
 
@@ -18,12 +18,12 @@ Content-Type: application/json
   "stockAmount": 10
 }
 
-### Get producto by ID
-# Replace {{id}} with the actual product ID
+### Obtener producto por ID
+# Reemplazar {{id}} con el ID real del producto
 GET {{baseUrl}}/api/v1/productos/{{id}}
 
-### Update producto (requires API key)
-# Replace {{id}} with the actual product ID
+### Actualizar producto (requiere API key)
+# Reemplazar {{id}} con el ID real del producto
 PUT {{baseUrl}}/api/v1/productos/{{id}}
 Content-Type: application/json
 x-api-key: {{apiKey}}
@@ -33,12 +33,12 @@ x-api-key: {{apiKey}}
   "producto": "Estufa Philips modelo 3000"
 }
 
-### Delete producto (requires API key)
-# Replace {{id}} with the actual product ID
+### Eliminar producto (requiere API key)
+# Reemplazar {{id}} con el ID real del producto
 DELETE {{baseUrl}}/api/v1/productos/{{id}}
 x-api-key: {{apiKey}}
 
-### Invalid API key example (should return 401)
+### Ejemplo de API key inválida (debe devolver 401)
 PUT {{baseUrl}}/api/v1/productos/{{id}}
 Content-Type: application/json
 x-api-key: invalid_key
@@ -47,11 +47,11 @@ x-api-key: invalid_key
   "stockAmount": 5
 }
 
-### Get albums as CSV
+### Obtener productos como CSV
 GET {{baseUrl}}/api/v1/albums/csv
 
-### Notes:
+### Notas:
 # 1. Ajusta @apiKey para que coincida con tu valor en .env (API_KEY).
 # 2. Reemplaza {{id}} con el ID real del producto en cada petición.
 # 3. Usa la extensión REST Client (humao.rest-client) en VS Code.
-# 4. El endpoint /albums/csv descarga los primeros 15 albums como CSV.
+# 4. El endpoint /albums/csv descarga los primeros 15 productos como CSV.

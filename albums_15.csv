@@ -1,5 +1,4 @@
 id,producto,stockAmount,fechaIngreso
-2e6a9d44-1c3b-476f-82e1-9a8b7c6d5e33,"Monitor LG UltraWide 34",12,2025-01-25
 8e2c4d77-3b5a-4f1e-9d6c-7f8a1b2c3d55,"Auriculares Sony WH-1000XM5",60,2025-03-12
 4b1d6e92-7c3f-413d-8a2b-5e6f7a8b9c22,"Disco SSD Samsung 1TB",200,2025-01-30
 6c8e2a55-1d4b-42f6-9c7a-3e5f6a7b8c11,"Router TP-Link AX6000",35,2025-02-15
@@ -8,3 +7,4 @@ id,producto,stockAmount,fechaIngreso
 aad3b163-072b-4f04-aed1-fbcd8b35751a,"Figura de acción",10,2025-12-01
 019e8b9c-03c0-416b-9e09-8fa0f088d4ff,"Figura de acción",10,2025-12-02
 fa0e2c11-7542-40fb-9d4e-50139c99082a,"Figura de acción",10,2025-12-02
+35edf8a6-93de-4708-a3ad-9fae90794839,"Figura de acción",10,2025-12-02

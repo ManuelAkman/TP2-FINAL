@@ -6,7 +6,7 @@ class Producto {
     this.producto = producto;
     this.stockAmount = stockAmount;
     
-    // Set fechaIngreso with default to current date in YYYY-MM-DD format
+    // Establecer fechaIngreso con valor por defecto de la fecha actual en formato YYYY-MM-DD
     if (fechaIngreso) {
       this.fechaIngreso = fechaIngreso;
     } else {
@@ -15,7 +15,7 @@ class Producto {
     }
   }
 
-  // Convert to plain object
+  // Convertir a objeto plano
   toJSON() {
     return {
       id: this.id,

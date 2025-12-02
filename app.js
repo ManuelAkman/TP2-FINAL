@@ -12,12 +12,12 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-// Health check route
+// Ruta de verificación de salud
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', env: config.nodeEnv });
 });
 
-// API Routes
+// Rutas de la API
 app.use('/api/v1/productos', productoRoutes);
 app.use('/api/v1/albums', albumRoutes);
 

@@ -1,11 +1,5 @@
 [
   {
-    "id": "2e6a9d44-1c3b-476f-82e1-9a8b7c6d5e33",
-    "producto": "Monitor LG UltraWide 34",
-    "stockAmount": 12,
-    "fechaIngreso": "2025-01-25"
-  },
-  {
     "id": "8e2c4d77-3b5a-4f1e-9d6c-7f8a1b2c3d55",
     "producto": "Auriculares Sony WH-1000XM5",
     "stockAmount": 60,
@@ -49,6 +43,12 @@
   },
   {
     "id": "fa0e2c11-7542-40fb-9d4e-50139c99082a",
+    "producto": "Figura de acción",
+    "stockAmount": 10,
+    "fechaIngreso": "2025-12-02"
+  },
+  {
+    "id": "35edf8a6-93de-4708-a3ad-9fae90794839",
     "producto": "Figura de acción",
     "stockAmount": 10,
     "fechaIngreso": "2025-12-02"
