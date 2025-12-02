@@ -41,7 +41,7 @@ class ProductoController {
   async deleteProducto(req, res) {
     try {
       await productoService.deleteProducto(req.params.id);
-      res.status(204).send();
+      res.status(200).json({ message: 'Producto eliminado con éxito' });
     } catch (error) {
       res.status(404).json({ error: error.message });
     }
